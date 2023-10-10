@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo del DOM</title>
+</head>
+<body>
+    <p id="miParrafo">Este es un párrafo.</p>
+    <button id="miBoton">Haz clic para cambiar el texto</button>
+
+    <script>
+        // Accedemos a los elementos del DOM
+        var parrafo = document.getElementById("miParrafo");
+        var boton = document.getElementById("miBoton");
+
+        // Agregamos un evento al botón
+        boton.addEventListener("click", function() {
+            // Modificamos el contenido del párrafo
+            parrafo.textContent = "¡El texto ha sido cambiado!";
+        });
+    </script>
+</body>
+</html>
