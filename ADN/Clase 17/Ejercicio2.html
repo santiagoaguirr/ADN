@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Autenticación Simple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        p#mensaje {
+            color: #e74c3c;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciar Sesión</h1>
+    <form id="formulario">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" required><br>
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id "contrasena" required><br>
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+    <p id="mensaje"></p>
+
+    <script>
+        // Credenciales predefinidas (cambia estos valores según tus necesidades)
+        const usuarioPredefinido = "usuario";
+        const contrasenaPredefinida = "contrasena";
+
+        // Obtener referencias a elementos HTML
+        const formulario = document.querySelector("#formulario");
+        const usuarioInput = document.querySelector("#usuario");
+        const contrasenaInput = document.querySelector("#contrasena");
+        const mensaje = document.querySelector("#mensaje");
+
+        // Manejar el envío del formulario
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const usuarioIngresado = usuarioInput.value;
+            const contrasenaIngresada = contrasenaInput.value;
+
+            if (usuarioIngresado === usuarioPredefinido && contrasenaIngresada === contrasenaPredefinida) {
+                mensaje.textContent = "¡Inicio de sesión exitoso!";
+                mensaje.style.color = "#2ecc71";
+            } else {
+                mensaje.textContent = "Credenciales incorrectas. Inténtalo de nuevo.";
+                mensaje.style.color = "#e74c3c";
+            }
+        });
+    </script>
+</body>
+</html>

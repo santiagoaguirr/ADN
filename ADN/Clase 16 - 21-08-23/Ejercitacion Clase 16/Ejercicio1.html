@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /// Tomo los elementos botones
+        const boton1 = document.querySelector("#Boton1");
+        const boton2 = document.querySelector("#Boton2");
+        const boton3 = document.querySelector("#Boton3");
+        const boton4 = document.querySelector("#Boton4");
+        const boton5 = document.querySelector("#Boton5");
+        
+        /// Tomo elementos h1 y p
+        
+        const display = document.querySelector("#display");
+        const parrafo = document.querySelector("#parrafo");
+        
+            boton1.addEventListener("click", () => {
+                display.innerText = "Boton 1";
+            });
+    </script>
+    
+    <div class="contenedor">
+        <button id="Boton1">Botón 1</button>
+        <button id="Boton2">Botón 2</button>
+        <button id="Boton3">Botón 3</button>
+        <button id="Boton4">Botón 4</button>
+        <button id="Boton5">Botón 5</button>
+        <div>
+            <h2 id="display">Titulo 1</h2>
+            <p id="parrafo">Texto centrado debajo de los botones</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+.section{
+    padding-block: 5rem;
+    align-items: 100vh;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensaje{
+    background-color: aquamarine;
+    padding-block: 2rem;
+}
