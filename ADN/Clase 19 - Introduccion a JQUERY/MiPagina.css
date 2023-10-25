@@ -12,4 +12,5 @@
 .mensaje{
     background-color: aquamarine;
     padding-block: 2rem;
+    display:none;
 }
