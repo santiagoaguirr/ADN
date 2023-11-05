@@ -7,10 +7,27 @@ setTimeout(() => {
     $('.mensaje').fadeIn(3000)
 }, 3000);
 
-$('#mi-boton').click(function() {
+$('#boton-desaparecer').click(function() {
     $('.mensaje').fadeOut(3000)
     });
+
+$('#boton-aparecer').click(() => {
+     $('.mensaje').fadeIn(3000)
+    });
+
+
+$('#boton-toggle').click(() => {
+    let element = $('.card')
+    if(element.hasClass('visible')){
+        element.removeClass('visible')
+    } else {
+        element.addClass('visible');
+    }
 })
+})
+
+
+
 
 
 

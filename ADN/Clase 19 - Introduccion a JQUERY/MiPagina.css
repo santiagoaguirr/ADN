@@ -7,10 +7,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-block: 0.5rem;
 }
 
 .mensaje{
     background-color: aquamarine;
     padding-block: 2rem;
     display:none;
+}
+
+.card{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.visible{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
