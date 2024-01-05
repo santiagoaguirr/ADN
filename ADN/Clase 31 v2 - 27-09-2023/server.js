@@ -17,7 +17,7 @@ app.get('/usuarios', async (req, res) => {
         res.json(rows);
     } catch (error) {
         console.error('Error al obtener usuarios:', error);
-        res.status(500).json({ error: 'Error interno del servidor' });
+        res.status(500).json({ error: 'Error interno del servidor', message: error.message });
     }
 });
 
